@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- wrapper starts-->
+    <div class="wrapper">
+        <!-- container starts -->
+        <div class="container">
+            <h1 class="app-name">Password Generator</h1>
+            
+            <!-- display container -->
+            <div class="display-container">
+                <input type="text" readonly placeholder="Password" class="display" id="passBox">
+    
+                <button class="copy-btn" data-copy-btn>
+                    <span class="copy-tooltip" id="copyIcon" data-copy-msg></span>
+                    <img src="./Images/copy.svg" alt="copy" class="copy-img" id="cpyimg">
+                </button>
+            </div>
+    
+            <!-- input container -->
+            <div class="input-container">
+                <!--password length section-->
+                <div class="length-container">
+                    <p class="lol" >Password Length</p>
+                    <span id="sliderValue"></span>
+                </div>
+                
+                <!--slider-->
+                <input type="range" min="1" max="20" value="8" class="slider"  step="1" id="inputSlider">
+                <!-- <form>
+                    <input type="range" name="amountRange" min="0" max="20" value="0" oninput="this.form.amountInput.value=this.value" />
+                    <input type="number" name="amountInput" min="0" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                  </form> -->
+                <!-- checkboxes-->
+                <div class="checkbox-wrapper">
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="uppercase" id="uppercase">
+                        <label for="uppercase">Includes Uppercase letters (A-Z)</label>
+                    </div>
+        
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="lowercase" id="lowercase">
+                        <label for="lowercase">Includes Lowercase letters (a-z)</label>
+                    </div>
+        
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="numbers" id="numbers">
+                        <label for="numbers">Includes Numbers (0-9)</label>
+                    </div>
+        
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="symbols" id="symbols">
+                        <label for="symbols">Includes Symbols (@-*)</label>
+                    </div>
+                </div>
+                <!-- strength section-->
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div data-indicator class="indicator" style="background-color: rgb(0, 255, 0); box-shadow: rgb(0, 255, 0) 0px 0px 12px 1px;"></div>
+                </div>
+    
+                <!-- generate password-->
+                <button id="genBtn">Generate Password</button>
+            </div>
+        </div>
+        <!-- container ends-->
+    </div>
+    <!-- wrapper ends -->
+   
+
+    <!-- custom script -->
+    <script src="index.js"></script>
+    <!-- <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span> -->
+</body>
+</html>
